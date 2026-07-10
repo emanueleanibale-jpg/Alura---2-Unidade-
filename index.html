@@ -20,9 +20,15 @@
                 margin: 0 auto;
                 padding: 16px;
             }
+            article{
+              display: flex;
+            }
             img{
                 width: 80px;
                 height: 80px;
+            }
+            .artigo-autor {
+                font-weight: bold;
             }
         </style>
     </head>
@@ -32,10 +38,46 @@
             <p>Vou te mostrar como você pode se organizar para anotar seus livros de leitura.</p>
         </header>
         <main>
-            <img src="pilha-de-livros.avif" alt="Esta imagem é uma ilustração em estilo flat design que representa uma pilha de livros coloridos ao lado de um livro aberto em pé.">
-            <h2>Meu Primeiro Post</h2>
-            <p>Por: Emanuele Anibale</p>
-            <p>Boas vindas ao meu novo blog! Aqui você encontrará um rumo para começar a organizar sua lista de leitura.</p>
+            <article>
+                <img src="pilha-de-livros.avif" alt="Esta imagem é uma ilustração em estilo flat design que representa uma pilha de livros coloridos ao lado de um livro aberto em pé.">
+            <div>
+                <h2>Meu Primeiro Post</h2>
+                <p class="artigo-autor">Por: Emanuele Anibale</p>
+                <p>Boas vindas ao meu novo blog! Aqui você encontrará um rumo para começar a organizar sua lista de leitura.</p>
+                <button>💜 <span>0</span></button>
+                <button>👍​ <span>0</span></button>
+            </div>
+            </article>
+            <article>
+                <img src="pilha-de-livros.avif" alt="Esta imagem é uma ilustração em estilo flat design que representa uma pilha de livros coloridos ao lado de um livro aberto em pé.">
+            <div>
+                <h2>Meu Segundo Post</h2>
+                <p class="artigo-autor">Por: Emanuele Anibale</p>
+                <p>Boas vindas ao meu novo blog! Aqui você encontrará um rumo para começar a organizar sua lista de leitura.</p>
+                <button>💜 <span>0</span></button>
+                <button>👍​ <span>0</span></button>
+            </div>
+            </article>
         </main>
     </body>
+    <script>
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function(botao){
+            let curtiu = false;
+            botao.addEventListener("click", botaoClicado)
+            function botaoClicado(){
+                console.log("fui clicado")
+                let texto = botao.querySelector("span")
+                if (curtiu === false){
+                    texto.textContent++;
+                    curtiu=true;
+                }
+                else{
+                    texto.textContent--;
+                    curtiu=false;
+                }
+            }
+        })
+    </script>
 </html>
