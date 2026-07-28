@@ -1,2 +1,2 @@
 # Alura---2-Unidade-
-Projeto em andamento. Já estruturei o site com HTML e CSS: defini cores, organizei parágrafos, alinhei os textos e inseri uma imagem. Segue o link com o progresso até aqui.
+Criei um blog simples que conta a história dos livros, desde os antigos até os digitais. O site tem 6 postagens organizadas com textos, fotos bonitas e indicação de onde tirei as informações. Usei HTML para a estrutura e CSS para deixar as imagens quadradinhas e arrumadas.
