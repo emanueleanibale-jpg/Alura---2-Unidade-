@@ -1,83 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Blog</title>
-        <style>
-            header{
-                background-color: rgb(53, 2, 100);
-                color: blanchedalmond;
-                text-align: center;
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 16px;
-            }
-            main{
-                background-color: blanchedalmond;
-                color:rgb(53, 2, 100);
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 16px;
-            }
-            article{
-              display: flex;
-            }
-            img{
-                width: 80px;
-                height: 80px;
-            }
-            .artigo-autor {
-                font-weight: bold;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>Meus Livros</h1>
-            <p>Vou te mostrar como você pode se organizar para anotar seus livros de leitura.</p>
-        </header>
-        <main>
-            <article>
-                <img src="pilha-de-livros.avif" alt="Esta imagem é uma ilustração em estilo flat design que representa uma pilha de livros coloridos ao lado de um livro aberto em pé.">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Meus Livros</h1>
+        <p>Vou te mostrar como você pode se organizar para anotar seus livros de leitura.</p>
+    </header>
+    <main>
+        <article>
+            <img src="pilha-de-livros.avif" alt="Esta imagem é uma ilustração em estilo flat design que representa uma pilha de livros coloridos ao lado de um livro aberto em pé.">
             <div>
                 <h2>Meu Primeiro Post</h2>
                 <p class="artigo-autor">Por: Emanuele Anibale</p>
-                <p>Boas vindas ao meu novo blog! Aqui você encontrará um rumo para começar a organizar sua lista de leitura.</p>
+                <p>Boas vindas ao meu novo blog!<br>Aqui você encontrará um rumo para começar a organizar sua lista de leitura.</p>
+                <p class="artigo-fonte"><strong>Fonte:</strong> Conteúdo Autoral</p>
                 <button>💜 <span>0</span></button>
-                <button>👍​ <span>0</span></button>
+                <button>👍 <span>0</span></button>
             </div>
-            </article>
-            <article>
-                <img src="pilha-de-livros.avif" alt="Esta imagem é uma ilustração em estilo flat design que representa uma pilha de livros coloridos ao lado de um livro aberto em pé.">
-            <div>
-                <h2>Meu Segundo Post</h2>
-                <p class="artigo-autor">Por: Emanuele Anibale</p>
-                <p>Boas vindas ao meu novo blog! Aqui você encontrará um rumo para começar a organizar sua lista de leitura.</p>
-                <button>💜 <span>0</span></button>
-                <button>👍​ <span>0</span></button>
-            </div>
-            </article>
-        </main>
-    </body>
-    <script>
-        const botoes = document.querySelectorAll("button");
+        </article>
 
-        botoes.forEach(function(botao){
-            let curtiu = false;
-            botao.addEventListener("click", botaoClicado)
-            function botaoClicado(){
-                console.log("fui clicado")
-                let texto = botao.querySelector("span")
-                if (curtiu === false){
-                    texto.textContent++;
-                    curtiu=true;
-                }
-                else{
-                    texto.textContent--;
-                    curtiu=false;
-                }
-            }
-        })
-    </script>
+        <article>
+            <img src="livro-oculos.webp" alt="Fotografia de livro antigo, mostrando as páginas amareladas pelo tempo.">
+            <div>
+                <h2>A Era dos Monges Copistas: Livros Feitos à Mão</h2>
+                <p class="artigo-autor">Por: Emanuele Anibale</p>
+                <p>Durante a Idade Média, os livros eram produzidos de forma totalmente artesanal. Os monges copistas passavam anos trancados in salas de mosteiros escrevendo e decorando cada página à mão.</p>
+                <p>Cada obra era única, adornada com detalhes em ouro e ilustrações ricas chamadas de iluminuras.</p>
+                <p class="artigo-fonte"><strong>Fonte:</strong> Brasil Escola</p>
+                <button>💜 <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="tabua.avif" alt="Fotografia de uma tábua de argila com alguns escritos.">
+            <div>
+                <h2>Como Tudo Começou: A Origem dos Livros</h2>
+                <p class="artigo-autor">Por: Emanuele Anibale</p>
+                <p>Muito antes do papel que conhecemos hoje, a humanidade registrava suas histórias em tábuas de argila, rolos de papiro e pergaminhos feitos de pele de animal.<br>Esses primeiros formatos eram raros, valiosos e guardavam o conhecimento do mundo antigo de forma totalmente manuscrita.</p>
+                <p class="artigo-fonte"><strong>Fonte:</strong> InfoEscola</p>
+                <button>💜 <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="estante.avif" alt="Fotografia de uma biblioteca clássica com várias prateleiras de madeira repletas de livros antigos e encadernados.">
+            <div>
+                <h2>A Revolução da Prensa e a Disseminação da Leitura</h2>
+                <p class="artigo-autor">Por: Emanuele Anibale</p>
+                <p>No século XV, Johannes Gutenberg inventou a prensa de tipos móveis, revolucionando a história. Essa máquina permitiu produzir livros em massa pela primeira vez.</p>
+                <p>Com isso, a literatura se tornou acessível para a população, servindo como a principal ferramenta para espalhar o conhecimento e a educação pelo mundo.</p>
+                <p class="artigo-fonte"><strong>Fonte:</strong> Mundo Educação</p>
+                <button>💜 <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="livro-aberto.webp" alt="Fotografia focada na capa de um livro aberto sobre uma mesa com outros livros ao fundo.">
+            <div>
+                <h2>A Literatura nos Dias de Hoje</h2>
+                <p class="artigo-autor">Por: Emanuele Anibale</p>
+                <p>Atualmente, as livrarias e bibliotecas se transformaram em verdadeiros refúgios culturais. O livro físico continua extremamente forte e amado.<br>Ele funciona não apenas como uma fonte de estudo e entretenimento, mas também como um hábito essencial de autocuidado, foco e expansão da criatividade na nossa rotina.</p>
+                <p class="artigo-fonte"><strong>Fonte:</strong> Fundação Pró-Livro</p>
+                <button>💜 <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="livro-tecnologico.avif" alt="Um leitor digital Kindle preto está deitado sobre uma mesa de madeira.">
+            <div>
+                <h2>A Era Digital: E-books e Audiolivros</h2>
+                <p class="artigo-autor">Por: Emanuele Anibale</p>
+                <p>A tecnologia trouxe os e-books e os audiolivros, mudando nossa forma de consumir histórias. Agora, podemos carregar milhares de volumes em leitores digitais.</p>
+                <p>Também conseguimos ouvir narrações incríveis direto no celular enquanto fazemos outras tarefas. É a literatura se adaptando à dinâmica do mundo moderno!</p>
+                <p class="artigo-fonte"><strong>Fonte:</strong> TechTudo</p>
+                <button>💜 <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+    </main>
+    <script src="scrip.js"></script>
+</body>
 </html>
